@@ -1,0 +1,16 @@
+{
+  "nodes": [
+    {
+      "id": "slam-kalman-filter",
+      "status": "learning",
+      "notes": "Keep this under SLAM and link later to control/state estimation."
+    },
+    {
+      "id": "project-custom-node",
+      "label": "自定义项目节点",
+      "parentId": "project",
+      "status": "want",
+      "notes": "Manual-only knowledge node."
+    }
+  ]
+}

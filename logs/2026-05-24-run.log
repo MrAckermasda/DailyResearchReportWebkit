@@ -1,0 +1,27 @@
+﻿**********************
+Windows PowerShell 脚本开始
+开始时间: 20260524154633
+用户名: 刘英伦、\lunyi
+RunAs 用户: 刘英伦、\lunyi
+配置名称: 
+计算机: 刘英伦、 (Microsoft Windows NT 10.0.26200.0)
+主机应用程序: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -file  C:\Users\lunyi\Desktop\学习与科研日推\generate_research_digest.ps1 
+进程 ID: 8592
+PSVersion: 5.1.26100.8457
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8457
+BuildVersion: 10.0.26100.8457
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+PS>TerminatingError(Invoke-WebRequest):“远程服务器返回错误: (404) 未找到。”
+>> TerminatingError(Invoke-WebRequest):“远程服务器返回错误: (404) 未找到。”
+警告: Video feed failed for SimpleFOC: 远程服务器返回错误: (404) 未找到。
+警告: 模块“LearningResearch.Common”中的某些导入命令的名称包含未批准的动词，这些动词可能导致这些命令名不易被发现。若要查找具有未批准的动词的命令，请使用 Verbose 参数再次运行 Import-Module 命令。有关批准的动词列表，请键入 Get-Verb。
+PS>TerminatingError():“No digest files found under C:\Users\lunyi\Desktop\学习与科研日推”
+**********************
+Windows PowerShell 脚本结束
+结束时间: 20260524154714
+**********************

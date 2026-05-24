@@ -1,0 +1,19 @@
+{
+  "nodes": [
+    {
+      "id": "slam-bf3cd61a",
+      "status": "learned",
+      "notes": ""
+    },
+    {
+      "id": "math-1c0592fe",
+      "status": "learned",
+      "notes": ""
+    },
+    {
+      "id": "slam-lie-group",
+      "status": "learned",
+      "notes": ""
+    }
+  ]
+}

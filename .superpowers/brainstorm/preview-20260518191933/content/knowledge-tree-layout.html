@@ -1,0 +1,109 @@
+<h2>知识树页面草图</h2>
+<p class="subtitle">目标：同一页里同时支持回顾已学内容、推进当前在学主题、补充未来想学方向，并和日推/周报联动。</p>
+
+<div class="mockup">
+  <div class="mockup-header">推荐方案：主树 + 详情面板 + 证据联动</div>
+  <div class="mockup-body" style="background:linear-gradient(180deg,#f0fdf4 0%,#ffffff 100%);padding:18px;">
+    <div style="display:grid;grid-template-columns:260px 1fr 320px;gap:14px;min-height:520px;">
+      <div style="background:#ffffff;border:1px solid #bbf7d0;border-radius:16px;padding:14px;">
+        <div class="label">FILTERS</div>
+        <div style="margin-top:10px;display:grid;gap:10px;">
+          <div style="padding:10px 12px;border-radius:10px;background:#dcfce7;">全部主线</div>
+          <div style="padding:10px 12px;border-radius:10px;background:#f8fafc;">想学</div>
+          <div style="padding:10px 12px;border-radius:10px;background:#f8fafc;">在学</div>
+          <div style="padding:10px 12px;border-radius:10px;background:#f8fafc;">已学</div>
+        </div>
+        <div style="margin-top:18px;" class="label">SUMMARY</div>
+        <div style="margin-top:8px;display:grid;gap:8px;">
+          <div style="padding:10px;border-radius:12px;background:#f8fafc;">想学 18</div>
+          <div style="padding:10px;border-radius:12px;background:#f8fafc;">在学 9</div>
+          <div style="padding:10px;border-radius:12px;background:#f8fafc;">已学 14</div>
+        </div>
+      </div>
+
+      <div style="background:#ffffff;border:1px solid #d1fae5;border-radius:16px;padding:16px;">
+        <div class="label">KNOWLEDGE TREE</div>
+        <div style="margin-top:12px;display:grid;gap:12px;">
+          <div style="padding:14px;border-radius:14px;background:#052e16;color:#fff;">
+            <strong>SLAM</strong>
+            <div style="display:grid;gap:8px;margin-top:10px;">
+              <div style="padding:10px;border-radius:10px;background:rgba(255,255,255,.10);">在学 · 刚体运动</div>
+              <div style="padding:10px;border-radius:10px;background:rgba(255,255,255,.10);">在学 · 李群李代数</div>
+              <div style="padding:10px;border-radius:10px;background:rgba(255,255,255,.10);">想学 · 前端 VO / 后端优化 / 回环</div>
+              <div style="padding:10px;border-radius:10px;background:rgba(255,255,255,.10);">关联 · 卡尔曼滤波 → 控制 / 状态估计</div>
+            </div>
+          </div>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+            <div style="padding:14px;border-radius:14px;background:#eff6ff;border:1px solid #bfdbfe;">
+              <strong>数学地基</strong>
+              <div style="margin-top:8px;">已学 · 向量 / 矩阵</div>
+              <div>在学 · LU / 特征值</div>
+              <div>想学 · SVD / PCA</div>
+            </div>
+            <div style="padding:14px;border-radius:14px;background:#fff7ed;border:1px solid #fed7aa;">
+              <strong>FOC 电机控制</strong>
+              <div style="margin-top:8px;">在学 · 电机模型</div>
+              <div>想学 · Clark / Park / SVPWM</div>
+              <div>想学 · 无传感器 FOC</div>
+            </div>
+          </div>
+
+          <div style="padding:14px;border-radius:14px;background:#f8fafc;border:1px dashed #cbd5e1;">
+            <strong>复合翼项目</strong>
+            <div style="margin-top:8px;">在学 · PX4 飞控部署</div>
+            <div>想学 · 悬停测试 / 外场试飞 / 参数整定</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:16px;padding:14px;">
+        <div class="label">DETAIL PANEL</div>
+        <div style="margin-top:10px;padding:12px;border-radius:12px;background:#f8fafc;">
+          <strong>李群李代数</strong>
+          <div style="margin-top:6px;color:#334155;">状态：在学</div>
+          <div style="margin-top:8px;">说明：用于位姿表示、微扰建模与优化求导。</div>
+        </div>
+        <div style="margin-top:12px;" class="label">EVIDENCE</div>
+        <div style="margin-top:8px;display:grid;gap:8px;">
+          <div style="padding:10px;border-radius:10px;background:#f8fafc;">来自 05.17 周报</div>
+          <div style="padding:10px;border-radius:10px;background:#f8fafc;">来自 05.18 日推</div>
+          <div style="padding:10px;border-radius:10px;background:#f8fafc;">关联 DDL：第 4 讲李群与李代数</div>
+        </div>
+        <div style="margin-top:12px;" class="label">ACTIONS</div>
+        <div style="margin-top:8px;display:grid;gap:8px;">
+          <div style="padding:10px;border-radius:10px;background:#dcfce7;">改状态</div>
+          <div style="padding:10px;border-radius:10px;background:#dbeafe;">加子节点</div>
+          <div style="padding:10px;border-radius:10px;background:#fef3c7;">加关联引用</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>页面联动</h3>
+  <div class="options" data-multiselect>
+    <div class="option" data-choice="link-home" onclick="toggleSelect(this)">
+      <div class="letter">A</div>
+      <div class="content">
+        <h3>和首页联动</h3>
+        <p>首页显示“当前在学重点”与“最近新增已学节点”。</p>
+      </div>
+    </div>
+    <div class="option" data-choice="link-weekly" onclick="toggleSelect(this)">
+      <div class="letter">B</div>
+      <div class="content">
+        <h3>和周报联动</h3>
+        <p>周报自动引用本周状态变化，例如哪些节点从在学变成已学。</p>
+      </div>
+    </div>
+    <div class="option" data-choice="link-archive" onclick="toggleSelect(this)">
+      <div class="letter">C</div>
+      <div class="content">
+        <h3>和归档联动</h3>
+        <p>点知识节点可跳到相关日推或 DDL 证据。</p>
+      </div>
+    </div>
+  </div>
+</div>

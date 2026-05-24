@@ -1,0 +1,132 @@
+<h2>学习科研日推网页方向</h2>
+<p class="subtitle">主目标已经确定为：1. 每天快速看重点  2. 历史归档可翻阅。下面是 3 个首页方向，选一个最接近你想要的。</p>
+
+<div class="cards">
+  <div class="card" data-choice="today-first" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div class="mockup">
+        <div class="mockup-header">A. 今日驾驶舱</div>
+        <div class="mockup-body" style="background:linear-gradient(180deg,#fff7ed 0%,#ffffff 100%);padding:16px;">
+          <div style="display:grid;grid-template-columns:1.4fr 1fr;gap:12px;">
+            <div>
+              <div style="padding:14px;border-radius:14px;background:#111827;color:#fff;margin-bottom:10px;">
+                <div class="label" style="color:#fdba74;">TODAY</div>
+                <div style="font-size:22px;font-weight:700;margin-top:6px;">05.18 今日重点</div>
+                <div style="opacity:.78;margin-top:6px;">2 个今日截止 · 3 个逾期 · 3 个未来三天</div>
+              </div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+                <div style="background:#fff;border:1px solid #fed7aa;border-radius:12px;padding:12px;">逾期任务</div>
+                <div style="background:#fff;border:1px solid #bfdbfe;border-radius:12px;padding:12px;">今日截止</div>
+                <div style="background:#fff;border:1px solid #bbf7d0;border-radius:12px;padding:12px;">未来 3 天</div>
+                <div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:12px;">视频 / 论文摘要</div>
+              </div>
+            </div>
+            <div style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:12px;">
+              <div class="label">HISTORY</div>
+              <div style="margin-top:8px;display:grid;gap:8px;">
+                <div style="padding:10px;border-radius:10px;background:#f8fafc;">05.18</div>
+                <div style="padding:10px;border-radius:10px;background:#f8fafc;">05.14</div>
+                <div style="padding:10px;border-radius:10px;background:#f8fafc;">05.11</div>
+                <div style="padding:10px;border-radius:10px;background:#f8fafc;">05.10</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A. 今日驾驶舱</h3>
+      <p>首页先压缩出今天最该看的内容，历史放右侧或下方。适合你每天打开先开工。</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="archive-first" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div class="mockup">
+        <div class="mockup-header">B. 归档浏览器</div>
+        <div class="mockup-body" style="background:linear-gradient(180deg,#eff6ff 0%,#ffffff 100%);padding:16px;">
+          <div style="display:grid;grid-template-columns:280px 1fr;gap:12px;">
+            <div style="background:#fff;border:1px solid #bfdbfe;border-radius:14px;padding:12px;">
+              <div class="label">DATES</div>
+              <div style="margin-top:8px;display:grid;gap:8px;">
+                <div style="padding:10px;border-radius:10px;background:#dbeafe;">05.18 周一</div>
+                <div style="padding:10px;border-radius:10px;background:#f8fafc;">05.14 周四</div>
+                <div style="padding:10px;border-radius:10px;background:#f8fafc;">05.11 周一</div>
+                <div style="padding:10px;border-radius:10px;background:#f8fafc;">05.10 周日</div>
+              </div>
+            </div>
+            <div>
+              <div style="background:#111827;color:#fff;padding:14px;border-radius:14px;margin-bottom:10px;">2026.05.18 学习与科研日推</div>
+              <div style="display:grid;gap:10px;">
+                <div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:12px;">DDL 提醒</div>
+                <div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:12px;">arXiv 论文</div>
+                <div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:12px;">视频更新 / 开源项目</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B. 归档浏览器</h3>
+      <p>首页更像知识日志，左边快速切日期，右边完整展开当天内容。适合长期回看和对比。</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="hybrid" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div class="mockup">
+        <div class="mockup-header">C. 混合模式</div>
+        <div class="mockup-body" style="background:linear-gradient(180deg,#ecfeff 0%,#ffffff 100%);padding:16px;">
+          <div style="display:grid;grid-template-columns:1fr;gap:12px;">
+            <div style="background:#083344;color:#fff;border-radius:14px;padding:14px;">
+              <div class="label" style="color:#67e8f9;">SNAPSHOT</div>
+              <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px;">
+                <div style="background:rgba(255,255,255,.08);padding:10px;border-radius:10px;">逾期 3</div>
+                <div style="background:rgba(255,255,255,.08);padding:10px;border-radius:10px;">今日 2</div>
+                <div style="background:rgba(255,255,255,.08);padding:10px;border-radius:10px;">论文 0</div>
+                <div style="background:rgba(255,255,255,.08);padding:10px;border-radius:10px;">视频 6</div>
+              </div>
+            </div>
+            <div style="display:grid;grid-template-columns:240px 1fr;gap:12px;">
+              <div style="background:#fff;border:1px solid #cffafe;border-radius:14px;padding:12px;">日期轴 / 筛选</div>
+              <div style="display:grid;gap:10px;">
+                <div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:12px;">今日焦点</div>
+                <div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:12px;">完整日推正文</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C. 混合模式</h3>
+      <p>顶部先看今日摘要，下面继续保留完整归档阅读区。信息最全，但页面会更复杂一些。</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>我的建议</h3>
+  <p>我推荐 <strong>C. 混合模式</strong>。你当前既需要“今天先做什么”，也需要“过几天翻历史记录”，它最贴合这两个目标，而且能直接映射你现有 Markdown 结构。</p>
+</div>
+
+<div class="section">
+  <h3>你选的时候重点看什么</h3>
+  <div class="pros-cons">
+    <div class="pros">
+      <h4>更偏 A</h4>
+      <ul>
+        <li>你主要把它当成每天开工前的面板</li>
+        <li>你最在意今天、逾期、未来三天</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h4>更偏 B</h4>
+      <ul>
+        <li>你经常回翻过去的日推内容</li>
+        <li>你希望当天内容原样完整阅读</li>
+      </ul>
+    </div>
+  </div>
+</div>
