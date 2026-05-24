@@ -8,6 +8,22 @@ $ErrorActionPreference = 'Stop'
 
 Import-Module (Join-Path $PSScriptRoot 'modules/LearningResearch.Common.psm1') -Force
 
+function Get-DigestTitle {
+    param(
+        [Parameter(Mandatory)][string]$FallbackName,
+        [Parameter(Mandatory)][string]$RawMarkdown
+    )
+
+    $lines = $RawMarkdown -split "`r?`n"
+    foreach ($line in $lines) {
+        if ($line -match '^#\s+(.+)$') {
+            return $matches[1].Trim()
+        }
+    }
+
+    return [System.IO.Path]::GetFileNameWithoutExtension($FallbackName)
+}
+
 $dashboardDir = Join-Path $OutputDir 'dashboard'
 $digestJsonDir = Join-Path $dashboardDir 'digests'
 New-Item -ItemType Directory -Force -Path $dashboardDir, $digestJsonDir | Out-Null
@@ -27,7 +43,7 @@ $documents = foreach ($digest in $digests) {
     $raw = Get-Content -Raw -LiteralPath $digest.FullName -Encoding UTF8
     $document = [pscustomobject]@{
         date = $digest.DateKey
-        title = $digest.Name
+        title = Get-DigestTitle -FallbackName $digest.Name -RawMarkdown $raw
         rawMarkdown = $raw
     }
     $document | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath (Join-Path $digestJsonDir "$($digest.DateKey).json") -Encoding UTF8
@@ -35,10 +51,11 @@ $documents = foreach ($digest in $digests) {
 }
 
 $todayCount = ($ddlItems | Where-Object { $_.Date.ToString('yyyy-MM-dd') -eq $latest.DateKey -and -not $_.Completed }).Count
+$latestTitle = Get-DigestTitle -FallbackName $latest.Name -RawMarkdown (Get-Content -Raw -LiteralPath $latest.FullName -Encoding UTF8)
 $index = [pscustomobject]@{
     latestDigest = [pscustomobject]@{
         date = $latest.DateKey
-        title = $latest.Name
+        title = $latestTitle
     }
     summary = [pscustomobject]@{
         todayCount = $todayCount

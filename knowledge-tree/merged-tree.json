@@ -1,23 +1,43 @@
 {
   "topLevelBranches": [
     {
-      "id": "math",
-      "label": "数学地基"
+      "label": "数学地基",
+      "id": "math"
     },
     {
-      "id": "foc",
-      "label": "FOC 电机控制"
+      "label": "FOC 电机控制",
+      "id": "foc"
     },
     {
-      "id": "slam",
-      "label": "SLAM"
+      "label": "SLAM",
+      "id": "slam"
     },
     {
-      "id": "project",
-      "label": "复合翼项目"
+      "label": "复合翼项目",
+      "id": "project"
     }
   ],
   "nodes": [
+    {
+      "id": "slam-af8d62dc",
+      "label": "整理：SLAM十四讲全链路知识图谱（输入→前端→后端→回环→建图）",
+      "parentId": "slam",
+      "status": "want",
+      "evidence": [
+        "DDL: 2026-07-25"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "slam-a595483a",
+      "label": "串联总结：VF/HF特征提取 → 三角描述子 → 二值描述子 → 位姿解算 → 回环检测",
+      "parentId": "slam",
+      "status": "want",
+      "evidence": [
+        "DDL: 2026-09-02"
+      ],
+      "notes": ""
+    },
     {
       "id": "slam-6f7b522d",
       "label": "第8讲 视觉里程计2：直接法（LK光流/直接法VO对比）",
@@ -29,22 +49,52 @@
       "notes": ""
     },
     {
-      "id": "slam-b19f0a0d",
-      "label": "第12讲 建图（单目稠密重建/八叉树地图/语义地图）",
-      "parentId": "slam",
-      "status": "learned",
+      "id": "math-23041d59",
+      "label": "SVD求解ICP旋转矩阵：封闭解推导 + Eigen实现",
+      "parentId": "math",
+      "status": "want",
       "evidence": [
-        "DDL: 2026-06-22"
+        "DDL: 2026-08-07"
       ],
       "notes": ""
     },
     {
-      "id": "slam-d8a82fb0",
-      "label": "iBTC扩展了解：LiDAR+Camera多模态融合版本",
+      "id": "slam-f2717416",
+      "label": "深度学习+SLAM前沿：DroidSLAM / 端到端VO / DPV-SLAM",
       "parentId": "slam",
       "status": "want",
       "evidence": [
-        "DDL: 2026-08-30"
+        "DDL: 2026-07-20"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "slam-59fea626",
+      "label": "EKF实战：用EKF实现简单的目标追踪/SLAM仿真",
+      "parentId": "slam",
+      "status": "learned",
+      "evidence": [
+        "DDL: 2026-05-25"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "slam-2ea4ea6f",
+      "label": "第14讲 SLAM前沿综述：VIO / LIO / 语义SLAM / NeRF-SLAM / 3DGS-SLAM",
+      "parentId": "slam",
+      "status": "learned",
+      "evidence": [
+        "DDL: 2026-07-06"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "slam-d28cdb6b",
+      "label": "总结：KF/EKF与SLAM中状态估计的关系、在视觉SLAM中的应用",
+      "parentId": "slam",
+      "status": "learned",
+      "evidence": [
+        "DDL: 2026-05-30"
       ],
       "notes": ""
     },
@@ -65,42 +115,22 @@
       "notes": ""
     },
     {
-      "id": "slam-5e9d1038",
-      "label": "BTC代码复现：运行GitHub hku-mars/btc_descriptor + 拆解核心模块",
+      "id": "slam-02e333c1",
+      "label": "第11讲 回环检测（词袋DBoW3、准确率召回率）",
       "parentId": "slam",
       "status": "learned",
       "evidence": [
-        "DDL: 2026-08-27"
+        "DDL: 2026-06-18"
       ],
       "notes": ""
     },
     {
-      "id": "slam-fc5f8caa",
-      "label": "BTC论文精读（第III-V节）：二值描述子、匹配策略、实验分析",
+      "id": "slam-5e7826f5",
+      "label": "第13讲 从0搭建SLAM系统：完整框架联调运行",
       "parentId": "slam",
       "status": "learned",
       "evidence": [
-        "DDL: 2026-08-24"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "slam-kalman-filter",
-      "label": "卡尔曼滤波",
-      "parentId": "slam",
-      "status": "learned",
-      "evidence": [
-        "DDL: 2026-05-18",
-        "DDL: 2026-05-22",
-        "Digest: 2026-05-11",
-        "Digest: 2026-05-14",
-        "Digest: 2026-05-18",
-        "Digest: 2026-05-19",
-        "Digest: 2026-05-20",
-        "Digest: 2026-05-21",
-        "Digest: 2026-05-22",
-        "Digest: 2026-05-24",
-        "Weekly: 2026-W21"
+        "DDL: 2026-07-01"
       ],
       "notes": ""
     },
@@ -120,72 +150,19 @@
       "notes": ""
     },
     {
-      "id": "math-1c0592fe",
-      "label": "第3讲 三维空间刚体运动（旋转矩阵/四元数/Eigen实践）",
-      "parentId": "math",
-      "status": "learned",
+      "id": "project-flight-stack",
+      "label": "复合翼项目 / 飞控与试飞",
+      "parentId": "project",
+      "status": "learning",
       "evidence": [
-        "DDL: 2026-05-20"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "slam-59fea626",
-      "label": "EKF实战：用EKF实现简单的目标追踪/SLAM仿真",
-      "parentId": "slam",
-      "status": "learned",
-      "evidence": [
-        "DDL: 2026-05-25"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "slam-02e333c1",
-      "label": "第11讲 回环检测（词袋DBoW3、准确率召回率）",
-      "parentId": "slam",
-      "status": "learned",
-      "evidence": [
-        "DDL: 2026-06-18"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "slam-af8d62dc",
-      "label": "整理：SLAM十四讲全链路知识图谱（输入→前端→后端→回环→建图）",
-      "parentId": "slam",
-      "status": "want",
-      "evidence": [
-        "DDL: 2026-07-25"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "slam-5e7826f5",
-      "label": "第13讲 从0搭建SLAM系统：完整框架联调运行",
-      "parentId": "slam",
-      "status": "learned",
-      "evidence": [
-        "DDL: 2026-07-01"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "slam-f2717416",
-      "label": "深度学习+SLAM前沿：DroidSLAM / 端到端VO / DPV-SLAM",
-      "parentId": "slam",
-      "status": "want",
-      "evidence": [
-        "DDL: 2026-07-20"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "slam-348499e0",
-      "label": "对照SLAM十四讲：BTC描述子与第7讲/第11讲的联系（特征匹配 + 回环检测）",
-      "parentId": "slam",
-      "status": "want",
-      "evidence": [
-        "DDL: 2026-09-05"
+        "DDL: 2026-06-01",
+        "Digest: 2026-05-10",
+        "Digest: 2026-05-18",
+        "Digest: 2026-05-19",
+        "Digest: 2026-05-20",
+        "Digest: 2026-05-21",
+        "Digest: 2026-05-22",
+        "Digest: 2026-05-24"
       ],
       "notes": ""
     },
@@ -196,6 +173,16 @@
       "status": "learned",
       "evidence": [
         "DDL: 2026-05-17"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "math-1c0592fe",
+      "label": "第3讲 三维空间刚体运动（旋转矩阵/四元数/Eigen实践）",
+      "parentId": "math",
+      "status": "learned",
+      "evidence": [
+        "DDL: 2026-05-20"
       ],
       "notes": ""
     },
@@ -211,22 +198,12 @@
       "notes": ""
     },
     {
-      "id": "math-23041d59",
-      "label": "SVD求解ICP旋转矩阵：封闭解推导 + Eigen实现",
-      "parentId": "math",
-      "status": "want",
-      "evidence": [
-        "DDL: 2026-08-07"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "slam-d28cdb6b",
-      "label": "总结：KF/EKF与SLAM中状态估计的关系、在视觉SLAM中的应用",
+      "id": "slam-5e9d1038",
+      "label": "BTC代码复现：运行GitHub hku-mars/btc_descriptor + 拆解核心模块",
       "parentId": "slam",
       "status": "learned",
       "evidence": [
-        "DDL: 2026-05-30"
+        "DDL: 2026-08-27"
       ],
       "notes": ""
     },
@@ -241,30 +218,12 @@
       "notes": ""
     },
     {
-      "id": "project-flight-stack",
-      "label": "复合翼项目 / 飞控与试飞",
-      "parentId": "project",
-      "status": "learned",
-      "evidence": [
-        "DDL: 2026-06-01",
-        "Digest: 2026-05-10",
-        "Digest: 2026-05-18",
-        "Digest: 2026-05-19",
-        "Digest: 2026-05-20",
-        "Digest: 2026-05-21",
-        "Digest: 2026-05-22",
-        "Digest: 2026-05-24",
-        "Weekly: 2026-W21"
-      ],
-      "notes": ""
-    },
-    {
-      "id": "slam-a595483a",
-      "label": "串联总结：VF/HF特征提取 → 三角描述子 → 二值描述子 → 位姿解算 → 回环检测",
+      "id": "slam-d8a82fb0",
+      "label": "iBTC扩展了解：LiDAR+Camera多模态融合版本",
       "parentId": "slam",
       "status": "want",
       "evidence": [
-        "DDL: 2026-09-02"
+        "DDL: 2026-08-30"
       ],
       "notes": ""
     },
@@ -279,6 +238,25 @@
       "notes": ""
     },
     {
+      "id": "slam-kalman-filter",
+      "label": "卡尔曼滤波",
+      "parentId": "slam",
+      "status": "learning",
+      "evidence": [
+        "DDL: 2026-05-18",
+        "DDL: 2026-05-22",
+        "Digest: 2026-05-11",
+        "Digest: 2026-05-14",
+        "Digest: 2026-05-18",
+        "Digest: 2026-05-19",
+        "Digest: 2026-05-20",
+        "Digest: 2026-05-21",
+        "Digest: 2026-05-22",
+        "Digest: 2026-05-24"
+      ],
+      "notes": ""
+    },
+    {
       "id": "slam-281a0b6d",
       "label": "BTC论文精读（第I-II节）：三角描述子设计（3个关键点→边长三角形）、旋转不变性",
       "parentId": "slam",
@@ -289,12 +267,32 @@
       "notes": ""
     },
     {
-      "id": "slam-2ea4ea6f",
-      "label": "第14讲 SLAM前沿综述：VIO / LIO / 语义SLAM / NeRF-SLAM / 3DGS-SLAM",
+      "id": "slam-348499e0",
+      "label": "对照SLAM十四讲：BTC描述子与第7讲/第11讲的联系（特征匹配 + 回环检测）",
+      "parentId": "slam",
+      "status": "want",
+      "evidence": [
+        "DDL: 2026-09-05"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "slam-fc5f8caa",
+      "label": "BTC论文精读（第III-V节）：二值描述子、匹配策略、实验分析",
       "parentId": "slam",
       "status": "learned",
       "evidence": [
-        "DDL: 2026-07-06"
+        "DDL: 2026-08-24"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "slam-b19f0a0d",
+      "label": "第12讲 建图（单目稠密重建/八叉树地图/语义地图）",
+      "parentId": "slam",
+      "status": "learned",
+      "evidence": [
+        "DDL: 2026-06-22"
       ],
       "notes": ""
     }

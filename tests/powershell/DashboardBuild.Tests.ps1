@@ -21,6 +21,7 @@ Assert-True (-not (Test-Path $stalePath)) "Stale digest JSON should be removed"
 
 $index = Get-Content -Raw -LiteralPath $indexPath | ConvertFrom-Json
 Assert-Equal $index.latestDigest.date "2026-05-18" "Latest digest date should be 2026-05-18"
+Assert-Equal $index.latestDigest.title "学习与科研日推 - 2026.05.18 (周一)" "Latest digest title should come from the markdown heading"
 Assert-Equal $index.summary.todayCount 1 "Today count should come from the fixture digest"
 Assert-Equal $index.summary.overdueCount 1 "Overdue count should come from the fixture DDL"
 
@@ -28,6 +29,7 @@ $digestJsonPath = Join-Path $outDir "dashboard/digests/2026-05-18.json"
 Assert-True (Test-Path $digestJsonPath) "Per-digest JSON should be written"
 Assert-Equal $index.archive.Count 1 "Archive should contain one digest"
 Assert-Equal $index.archive[0].date "2026-05-18" "Archive entry date should match the digest"
+Assert-Equal $index.archive[0].title "学习与科研日推 - 2026.05.18 (周一)" "Archive entry title should use the markdown heading"
 
 New-Item -ItemType Directory -Force -Path $emptyDigestDir | Out-Null
 $emptyOutputDir = Join-Path $env:TEMP "learning-research-dashboard-empty-output"
